@@ -15,4 +15,6 @@ While these were mostly hard time works:
 * Author of МІА: Документообіг <a href="https://crm.erp.uno">crm.erp.uno</a> (2019—2022)
 * Author of Anders: Modal HoTT Proof Assistant <a href="https://anders.groupoid.space">anders.groupoid.space</a> (2021—2022)
 
+  _I, @5HT, no longer develop Anders typechecker, because I absolutely don't understand how the code I blatantly hijacked from @forked-from-1kasper works. There are [serious bugs](https://archive.fo/S7TjD) in my repository, so please, use Anders from the [repository of the real author](https://github.com/forked-from-1kasper/anders/)_
+
 All my works are licensed under the terms of <a href="https://5ht.co/license/">DHARMA LICENSE</a>
