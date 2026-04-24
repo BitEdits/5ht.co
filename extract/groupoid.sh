@@ -1,5 +1,7 @@
 #/bin/sh
 
+# groupoid.space
+
 git clone git@github.com:groupoid/alonzo
 git clone git@github.com:groupoid/yves
 

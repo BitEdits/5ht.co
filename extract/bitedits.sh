@@ -1,5 +1,6 @@
 #/bin/sh
 
+# 5ht.co
 
 git clone git@github.com:bitedits/5ht.co
 git clone git@github.com:bitedits/sokhatsky.art

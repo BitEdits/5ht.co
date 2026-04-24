@@ -1,5 +1,7 @@
 #/bin/sh
 
+# synrc.com
+
 git clone git@github.com:synrc/asn1
 git clone git@github.com:synrc/bpe
 git clone git@github.com:synrc/ca

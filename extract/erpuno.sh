@@ -1,6 +1,6 @@
 #/bin/sh
 
-# Get ERP.UNO
+# erp.uno
 
 git clone git@github.com:erpuno/abac
 git clone git@github.com:erpuno/acc

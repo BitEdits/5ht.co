@@ -1,5 +1,7 @@
 #/bin/sh
 
+# longchenpa.guru
+
 git clone git@github.com:longchenpa/buda
 git clone git@github.com:longchenpa/longchenpa.guru
 git clone git@github.com:longchenpa/tonpa.guru

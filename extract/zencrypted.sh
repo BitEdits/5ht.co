@@ -1,5 +1,7 @@
 #/bin/sh
 
+# zencrypted.uk
+
 git clone git@github.com:zencrypted/zencrypted.uk
 git clone git@github.com:zencrypted/protocol
 git clone git@github.com:zencrypted/x509
