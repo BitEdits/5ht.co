@@ -8,7 +8,6 @@ git clone git@github.com:erpuno/acquire
 git clone git@github.com:erpuno/act
 git clone git@github.com:erpuno/addr
 git clone git@github.com:erpuno/asic
-git clone git@github.com:erpuno/asic
 git clone git@github.com:erpuno/agent
 git clone git@github.com:erpuno/asic
 git clone git@github.com:erpuno/barlix
