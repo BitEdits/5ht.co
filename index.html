@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Maxim Sokhatsky (5HT / Namdak Tönpa) — author of Synrc OS.1, N2O, ERP.1 and the full Erlang/OTP high-assurance stack" />
 <meta name="author" content="Maxim Sokhatsky" />
-<title>5HT — Synrc Author</title>
-<link rel="stylesheet" href="blank.css"/>
-<link rel="stylesheet" href="nato.css"/>
+<title>5HT</title>
+<link rel="stylesheet" href="https://tonpa.guru/blank.css"/>
+<link rel="stylesheet" href="https://tonpa.guru/nato.css"/>
 <link rel="shortcut icon" type="image/x-icon" href="https://n2o.dev/img/favicon.ico"/>
 <link rel="apple-touch-icon" sizes="180x180" href="https://n2o.dev/img/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="32x32" href="https://n2o.dev/img/favicon-32x32.png"/>
@@ -17,17 +17,10 @@
 </head>
 <body>
 <nav>
-  <a href="https://synrc.com/">SYNRC</a>
-  <a href="https://erp.uno/">ERP</a>
-  <a href="https://n2o.dev">DEV</a>
   <a href="https://5ht.co" style="background:#ededed;">5HT</a>
-  <div class="dropdown">
-    <a onclick="drop()" class="dropbtn">EN</a>
-    <div id="dropdown" class="dropdown-content">
-      <a href="ua/index.html">UA</a>
-      <a href="#">EN</a>
-    </div>
-  </div>
+  <a href="https://n2o.dev">DEV</a>
+  <a href="https://erp.uno/">ERP</a>
+  <a href="https://synrc.com/">SYNRC</a>
 </nav>
 <header>
   <a href="https://github.com/5HT"><img src="https://n2o.dev/img/Erlang.svg" style="margin-bottom:-4px;"/></a>
@@ -38,14 +31,13 @@
     <section>
       <h3>Author</h3>
       <div>
-        Maxim Sokhatsky (Namdak Tönpa, 5HT).<br/>
-        Independent researcher, BDFL of the Synrc ecosystem.<br/>
+        Maksym Sokhatskyi (Namdak Tönpa Norbu, 5HT).<br/>
+        Independent researcher, BDFL of the Synrc Ecosystem<br/>
         All repositories listed below are owned by the author.<br/><br/>
         <b>Address</b>: м. Київ, Україна, 03056,<br/>
-        Політехнічна вул. 14-А, корпус 14 (прикладної математики).<br/>
+        Політехнічна вул. 14-А, корпус 14 ФПМ.<br/>
         <b>Mail</b>: namdak@tonpa.guru<br/>
         <b>GSM</b>: +380676631870<br/><br/>
-        Keybase: <a rel="me" href="https://keybase.io/axiosis">axiosis</a><br/>
         LinkedIn: <a rel="me" href="https://linkedin.com/in/sokhatsky">@sokhatsky</a><br/>
         Github: <a rel="me" href="https://github.com/5HT">@5HT</a><br/>
         Ukrainian Mathematical Mastodon: <a rel="me" href="https://twiukraine.com/@5HT">@5HT</a><br/>
@@ -62,8 +54,8 @@
         Three mutually distrusting planes (os.txt):
         <ul>
           <li><b>Security Admin BEAM</b> — long-term keys, CA, TSS, AU</li>
-          <li><b>System Admin BEAM</b> — capability broker, seats, net, ABAC</li>
-          <li><b>Application BEAM</b> — untrusted session / domain workloads</li>
+          <li><b>System Admin BEAM</b> — capability broker, seats, net</li>
+          <li><b>Application BEAM</b> — untrusted session and domain</li>
         </ul>
         Hardware root of trust: TPM 2.0 + UKI + Landlock + namespaces + cgroups + seccomp.
       </div>
@@ -71,10 +63,10 @@
     <section>
       <h3>Threat Model</h3>
       <div>
-        Absolute isolation of long-term cryptographic material.<br/>
-        Capability-based authority (no ambient authority).<br/>
-        Formal auditability and non-repudiation.<br/>
-        Small, inspectable TCB.<br/>
+        Absolute isolation of long-term cryptographic material.
+        Capability-based authority (no ambient authority).
+        Formal auditability and non-repudiation.
+        Small, inspectable TCB.
         Erlang/OTP supervision and hot-upgrade semantics.
       </div>
     </section>
@@ -159,7 +151,7 @@
           <li><a href="https://nitro.n2o.dev">NITRO</a> — declarative web</li>
           <li><a href="https://form.n2o.dev">FORM</a></li>
           <li><a href="https://rpc.n2o.dev">RPC</a> — BERT / gRPC / SOAP / Swift / JS</li>
-          <li><a href="https://rest.n2o.dev">REST</a></li>
+          <li><a href="https://rest.n2o.dev">REST</a> - REST Yoctoframework</li>
           <li><a href="https://sample.n2o.dev">SAMPLE</a> (WS)</li>
           <li><a href="https://review.n2o.dev">REVIEW</a> (MQTT)</li>
         </ul>
@@ -176,6 +168,20 @@
         </ul>
       </div>
     </section>
+    <section>
+      <h3>Infosec Utilities</h3>
+      <div>
+        <ul>
+          <li><a href="https://github.com/bitedits/rt">RT</a> — NuttX POSIX RTOS</li>
+          <li><a href="https://github.com/bitedits/skynet">SKYNET</a> — Drone Swarm X.422.1</li>
+          <li><a href="https://github.com/bitedits/be">BE</a> — Binary Editor</li>
+          <li><a href="https://github.com/bitedits/tv">TV</a> — Terminal Vision</li>
+          <li><a href="https://github.com/bitedits/sh">SH</a> — Formal POSIX shell</li>
+        </ul>
+      </div>
+    </section>
+  </article>
+  <article>
     <section>
       <h3>Security Plane</h3>
       <div>
@@ -231,27 +237,18 @@
       </div>
     </section>
     <section>
-      <h3>Base / RT / VM</h3>
+      <h3>Hypervision Plane</h3>
       <div>
         <ul>
           <li><a href="https://rt.n2o.dev">RT</a> — APP / SUP / SRV / ETS / QUIC / HEART / PATH / SH</li>
           <li><a href="https://base.n2o.dev">BASE</a> — RE / TIMER / UNICODE / IO</li>
           <li><a href="https://5ht.github.io/vm/">VM</a> — COMPILER / LINKER / EMULATOR</li>
+          <li><a href="https://hv.synrc.com">HV</a> — SEL4 / ALPINE / NETBSD</li>
         </ul>
       </div>
     </section>
-    <section>
-      <h3>Infosec Utilities</h3>
-      <div>
-        <ul>
-          <li><a href="https://github.com/bitedits/rt">RT</a> — NuttX POSIX RTOS</li>
-          <li><a href="https://github.com/bitedits/skynet">SKYNET</a> — Drone Swarm X.422.1</li>
-          <li><a href="https://github.com/bitedits/be">BE</a> — Binary Editor</li>
-          <li><a href="https://github.com/bitedits/tv">TV</a> — Terminal Vision</li>
-          <li><a href="https://github.com/bitedits/sh">SH</a> — Formal POSIX shell</li>
-        </ul>
-      </div>
-    </section>
+  </article>
+  <article>
     <section>
       <h3>Books &amp; Specs</h3>
       <div>
