@@ -1,22 +1,400 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="author" content="Maxim Sokhatsky" />
-    <title>TOP</title>
-    <link rel="stylesheet" href="https://n2o.dev/blank.css" />
-    <link rel="stylesheet" href="journal.css" />
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Maxim Sokhatsky (5HT / Namdak Tönpa) — author of Synrc OS.1, N2O, ERP.1 and the full Erlang/OTP high-assurance stack" />
+<meta name="author" content="Maxim Sokhatsky" />
+<title>5HT — Synrc Author</title>
+<link rel="stylesheet" href="blank.css"/>
+<link rel="stylesheet" href="nato.css"/>
+<link rel="shortcut icon" type="image/x-icon" href="https://n2o.dev/img/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="https://n2o.dev/img/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://n2o.dev/img/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://n2o.dev/img/favicon-16x16.png"/>
+<link rel="manifest" href="https://n2o.dev/img/site.webmanifest"/>
 </head>
 <body>
 <nav>
-  <a href='https://tonpa.guru'>Автор</a>
-  <a href='https://axiosis.top/'>Видавництво</a>
-  <a href='https://5ht.co'>Щоденник</a>
+  <a href="https://synrc.com/">SYNRC</a>
+  <a href="https://erp.uno/">ERP</a>
+  <a href="https://n2o.dev">DEV</a>
+  <a href="https://5ht.co" style="background:#ededed;">5HT</a>
+  <div class="dropdown">
+    <a onclick="drop()" class="dropbtn">EN</a>
+    <div id="dropdown" class="dropdown-content">
+      <a href="ua/index.html">UA</a>
+      <a href="#">EN</a>
+    </div>
+  </div>
 </nav>
 <header>
-  <a href="https://github.com/BitEdits/5ht.co/"><img src="https://tonpa.guru/seal.png"></a><h1>&top;</h1>
+  <a href="https://github.com/5HT"><img src="https://n2o.dev/img/Erlang.svg" style="margin-bottom:-4px;"/></a>
+  <h1><a href="https://synrc.com"><img src="https://n2o.dev/img/synrc.svg" style="margin-bottom:-10px;"/></a></h1>
 </header>
+<aside>
+  <article>
+    <section>
+      <h3>Author</h3>
+      <div>
+        Maxim Sokhatsky (Namdak Tönpa, 5HT).<br/>
+        Independent researcher, BDFL of the Synrc ecosystem.<br/>
+        All repositories listed below are owned by the author.<br/><br/>
+        <b>Address</b>: м. Київ, Україна, 03056,<br/>
+        Політехнічна вул. 14-А, корпус 14 (прикладної математики).<br/>
+        <b>Mail</b>: namdak@tonpa.guru<br/>
+        <b>GSM</b>: +380676631870<br/><br/>
+        Keybase: <a rel="me" href="https://keybase.io/axiosis">axiosis</a><br/>
+        LinkedIn: <a rel="me" href="https://linkedin.com/in/sokhatsky">@sokhatsky</a><br/>
+        Github: <a rel="me" href="https://github.com/5HT">@5HT</a><br/>
+        Ukrainian Mathematical Mastodon: <a rel="me" href="https://twiukraine.com/@5HT">@5HT</a><br/>
+        International Mathematical Mastodon: <a rel="me" href="https://mathstodon.xyz/@5ht">@5HT</a><br/>
+        StackExchange: <a href="https://proofassistants.stackexchange.com/users/197/">users/197</a><br/>
+        ORCID: <a href="https://orcid.org/0000-0001-7127-8796">0000-0001-7127-8796</a><br/>
+        SCOPUS: <a href="https://scopus.com/authid/detail.uri?authorId=57214352719">57214352719</a><br/>
+        ResearchGate: <a href="https://researchgate.net/profile/Maksym-Sokhatskyi">Maksym-Sokhatskyi</a>
+      </div>
+    </section>
+    <section>
+      <h3>OS.1 Planes</h3>
+      <div>
+        Three mutually distrusting planes (os.txt):
+        <ul>
+          <li><b>Security Admin BEAM</b> — long-term keys, CA, TSS, AU</li>
+          <li><b>System Admin BEAM</b> — capability broker, seats, net, ABAC</li>
+          <li><b>Application BEAM</b> — untrusted session / domain workloads</li>
+        </ul>
+        Hardware root of trust: TPM 2.0 + UKI + Landlock + namespaces + cgroups + seccomp.
+      </div>
+    </section>
+    <section>
+      <h3>Threat Model</h3>
+      <div>
+        Absolute isolation of long-term cryptographic material.<br/>
+        Capability-based authority (no ambient authority).<br/>
+        Formal auditability and non-repudiation.<br/>
+        Small, inspectable TCB.<br/>
+        Erlang/OTP supervision and hot-upgrade semantics.
+      </div>
+    </section>
+  </article>
+
+  <article>
+    <section>
+      <h3>ERP.1 Products (ІКС)</h3>
+      <div>
+        <ul>
+          <li><a href="https://erp.uno/edu/">Освіта</a> — ISO 21001 education management</li>
+          <li><a href="https://erp.uno/health/">Здоров'я</a> — HL7 medical information system</li>
+          <li><a href="https://erp.uno/mail/">Документи</a> — electronic document CRM</li>
+          <li><a href="https://erp.uno/acc/">Облік</a> — accounting, HR, payroll ERP</li>
+          <li><a href="https://erp.uno/warehouse/">Склад</a> — warehouse &amp; material supply</li>
+          <li><a href="https://erp.uno/cart/">Реєстри</a> — universal state / corporate registers</li>
+          <li><a href="https://erp.uno/pm/">Проєкти</a> — local Jira/Confluence (LaTeX)</li>
+          <li><a href="https://erp.uno/itsm/">Інциденти</a> — ITSM, billing, tariffication</li>
+          <li><a href="https://erp.uno/ai/">Істотність</a> — on-prem AI / semantic search</li>
+          <li><a href="https://erp.uno/olap/">Аналітика</a> — local DWH / OLAP</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>ERP.1 Services (Служби)</h3>
+      <div>
+        <ul>
+          <li><a href="https://cm.n2o.dev/">Конфігурації</a></li>
+          <li><a href="https://erp.uno/ca/">Сертифікати</a> — CA + ABAC attribute PKI</li>
+          <li><a href="https://abac.erp.uno">Контроль</a> — ABAC</li>
+          <li><a href="https://au.synrc.com">Аудит</a> — cryptographically protected logging</li>
+          <li><a href="https://erp.uno/vpn/">Тунелі</a> — L2/L3 Erlang VPN</li>
+          <li><a href="https://ns.n2o.dev">Імена</a> — DNSSEC (BCP 237)</li>
+          <li><a href="https://erp.uno/ias/">Авторизація</a> — identity, certificates, policy</li>
+          <li><a href="https://erp.uno/chat/">Комунікатор</a> — TLS X.690 DER + BUDDHA</li>
+          <li><a href="https://erp.uno/ldap/">Директорія</a> — PKI-aware LDAP / X.500</li>
+          <li><a href="https://erp.uno/bpmn/">Процеси</a> — BPMN ISO 19510 engine</li>
+          <li><a href="https://turn.erp.uno">Потоки</a> — STUN/TURN</li>
+          <li><a href="https://rtp.zencrypted.uk">Конференцзв'язок</a> — OpenWebRTC / GStreamer</li>
+          <li><a href="https://kvs.n2o.dev">Сховище</a> — KVS / SNIA / RocksDB / CEPH</li>
+          <li><a href="https://form.n2o.dev">Форми</a> — X-FORM validation</li>
+          <li><a href="https://mqtt.erp.uno">Брокер</a> — MQTT v5.0 (ISO/IEC 20922)</li>
+          <li><a href="https://ws.n2o.dev">Фреймворк</a> — N2O / NITRO</li>
+          <li><a href="https://asn1.zencrypted.uk">Компілятор</a> — ASN.1 → C99 / Swift</li>
+          <li><a href="https://os.synrc.com">Система</a></li>
+          <li><a href="https://cd.erp.uno">Кластер</a></li>
+          <li><a href="https://hv.synrc.com">Гіпервізор</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Завантаження</h3>
+      <div>
+        <ul>
+          <li><a href="https://x509.chat/bdfl.pdf">Кафедральний собор</a></li>
+          <li><a href="https://x509.chat/encryption.pdf">Архітектура шифрування</a></li>
+          <li><a href="https://hv.synrc.com/hv.pdf">Архітектура віртуалізації</a></li>
+          <li><a href="https://cd.erp.uno/deployment.pdf">Архітектура ЦОД</a></li>
+          <li><a href="https://cd.erp.uno/sre.pdf">Настанови адміністратора ЦОД</a></li>
+          <li><a href="https://rtp.zencrypted.uk/priv/rtp.pdf">Конференцзв'язок</a></li>
+          <li><a href="https://5ht.co/dist.pdf">Розподілена архітектура</a></li>
+          <li><a href="https://os.synrc.com/beam-os.pdf">Операційна система</a></li>
+          <li><a href="https://ca.n2o.dev/priv/security-policy.pdf">Політики і модель безпеки</a></li>
+          <li><a href="https://ca.n2o.dev/priv/nist.pdf">Профілі безпеки NIST 53</a></li>
+          <li><a href="https://os.synrc.com/os.txt">Архітектура безпеки ERP.1</a></li>
+          <li><a href="https://erp.uno/book/erp.pdf">Навчальний посібник</a></li>
+          <li><a href="https://protocol.zencrypted.uk">Регламент взаємодії</a></li>
+          <li><a href="https://n2o.dev">Фреймворк підприємства</a></li>
+          <li><a href="https://erp.uno/bpmn/bpmn-keynote.pdf">Процеси і Сховище</a></li>
+          <li><a href="https://erp.uno/man/ua/1.htm">Керівництво виконавця ERP.1</a></li>
+        </ul>
+      </div>
+    </section>
+  </article>
+
+  <article>
+    <section>
+      <h3>N2O Family</h3>
+      <div>
+        <ul>
+          <li><a href="https://ws.n2o.dev">N2O</a> — web-telecom framework</li>
+          <li><a href="https://nitro.n2o.dev">NITRO</a> — declarative web</li>
+          <li><a href="https://form.n2o.dev">FORM</a></li>
+          <li><a href="https://rpc.n2o.dev">RPC</a> — BERT / gRPC / SOAP / Swift / JS</li>
+          <li><a href="https://rest.n2o.dev">REST</a></li>
+          <li><a href="https://sample.n2o.dev">SAMPLE</a> (WS)</li>
+          <li><a href="https://review.n2o.dev">REVIEW</a> (MQTT)</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Process &amp; Storage</h3>
+      <div>
+        <ul>
+          <li><a href="https://bpe.zencrypted.uk">BPE</a> — business process engine</li>
+          <li><a href="https://kvs.zencrypted.uk">KVS</a> — cursor language / Mnesia / RocksDB / FS</li>
+          <li><a href="https://fs.n2o.dev">FS</a> — file-system events</li>
+          <li><a href="https://mad.n2o.dev">MAD</a> — Erlang package manager</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Security Plane</h3>
+      <div>
+        <ul>
+          <li><a href="https://github.com/synrc/tss">TSS</a> — TPM 2.0 / hardware crypto</li>
+          <li><a href="https://github.com/synrc/ca">CA</a> — root &amp; intermediate CAs</li>
+          <li><a href="https://github.com/synrc/au">AU</a> — high-assurance audit</li>
+          <li><a href="https://github.com/synrc/kvs">KVS</a> (sealed)</li>
+          <li><a href="https://github.com/synrc/cm">CM</a> — configuration database</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Control Plane</h3>
+      <div>
+        <ul>
+          <li><a href="https://github.com/synrc/os">OS</a> — core system services</li>
+          <li><a href="https://cd.erp.uno">CD</a> — cluster / names / mounts</li>
+          <li><a href="https://github.com/bitedits/seat">SEAT</a></li>
+          <li><a href="https://github.com/bitedits/land">LAND</a> — Landlock</li>
+          <li><a href="https://github.com/bitedits/net">NET</a> — nftables</li>
+          <li><a href="https://github.com/zencrypted/vpn">VPN</a></li>
+          <li><a href="https://github.com/erpuno/mqtt">MQTT</a></li>
+          <li><a href="https://github.com/erpuno/turn">TURN</a></li>
+          <li><a href="https://github.com/synrc/rest">REST</a></li>
+          <li><a href="https://github.com/synrc/asn1">ASN.1</a></li>
+          <li><a href="https://github.com/synrc/rpc">RPC</a></li>
+          <li><a href="https://github.com/zencrypted/x422">X.422</a></li>
+          <li><a href="https://github.com/zencrypted/ias">IAS</a></li>
+          <li><a href="https://github.com/synrc/ldap">LDAP</a></li>
+          <li><a href="https://github.com/erpuno/abac">ABAC</a></li>
+          <li><a href="https://github.com/synrc/bridge">BRIDGE</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Application Plane</h3>
+      <div>
+        <ul>
+          <li><a href="https://github.com/bitedits/x11">X11</a> — rootless Xorg / Xwayland</li>
+          <li><a href="https://github.com/bitedits/wm">WM</a> — ctwm + OTP</li>
+          <li><a href="https://github.com/synrc/mad">MAD</a></li>
+          <li><a href="https://github.com/5HT/pie">PIE</a> — Pie Editor</li>
+          <li><a href="https://github.com/synrc/fs">FS</a></li>
+          <li><a href="https://github.com/zencrypted/gst">GST</a> — GStreamer / PipeWire</li>
+          <li><a href="https://github.com/zencrypted/rtp">RTP</a> — WebRTC</li>
+          <li><a href="https://github.com/synrc/chat">CHAT</a></li>
+          <li><a href="https://github.com/synrc/bpmn">BPMN</a></li>
+          <li><a href="https://github.com/synrc/form">FORM</a></li>
+          <li><a href="https://github.com/synrc/n2o">N2O</a></li>
+          <li><a href="https://github.com/synrc/nitro">NITRO</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Base / RT / VM</h3>
+      <div>
+        <ul>
+          <li><a href="https://rt.n2o.dev">RT</a> — APP / SUP / SRV / ETS / QUIC / HEART / PATH / SH</li>
+          <li><a href="https://base.n2o.dev">BASE</a> — RE / TIMER / UNICODE / IO</li>
+          <li><a href="https://5ht.github.io/vm/">VM</a> — COMPILER / LINKER / EMULATOR</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Infosec Utilities</h3>
+      <div>
+        <ul>
+          <li><a href="https://github.com/bitedits/rt">RT</a> — NuttX POSIX RTOS</li>
+          <li><a href="https://github.com/bitedits/skynet">SKYNET</a> — Drone Swarm X.422.1</li>
+          <li><a href="https://github.com/bitedits/be">BE</a> — Binary Editor</li>
+          <li><a href="https://github.com/bitedits/tv">TV</a> — Terminal Vision</li>
+          <li><a href="https://github.com/bitedits/sh">SH</a> — Formal POSIX shell</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Books &amp; Specs</h3>
+      <div>
+        <ul>
+          <li><a href="https://n2o.dev/books/n2o.pdf">N2O INTERN</a></li>
+          <li><a href="https://n2o.dev/books/bpe.pdf">BPE INTERN</a></li>
+          <li><a href="https://n2o.dev/books/mad.pdf">MAD INTERN</a></li>
+          <li><a href="https://erp.uno/man/ua/1.htm">ERP INTERN</a></li>
+          <li><a href="https://n2o.dev/ua/books/vol.2/">N2O SPORT</a></li>
+          <li><a href="https://n2o.dev/ua/books/vol.3/">ERP SPORT</a></li>
+          <li><a href="https://ws.n2o.dev/doc/n2o.pdf">N2O PRO</a></li>
+          <li><a href="https://bpe.zencrypted.uk/doc/bpe.pdf">BPE PRO</a></li>
+          <li><a href="https://kvs.zencrypted.uk/doc/kvs.pdf">KVS PRO</a></li>
+          <li><a href="https://books.axiosis.top/erp/erp.pdf">ERP PRO</a></li>
+          <li><a href="https://os.synrc.com/os.txt">OS.1 Architecture</a></li>
+          <li><a href="https://os.synrc.com/beam-os.pdf">BEAM OS</a></li>
+          <li><a href="https://ca.n2o.dev/priv/nist.pdf">NIST SP 800-53</a></li>
+          <li><a href="https://ca.n2o.dev/priv/security-policy.pdf">Security Policy</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Research</h3>
+      <div>
+        <ul>
+          <li><a href="https://groupoid.space">Groupoid Infinity</a></li>
+          <li><a href="https://anders.groupoid.space">Anders</a> — Homotopy Type System</li>
+          <li><a href="https://laurent.groupoid.space">Laurent</a></li>
+          <li><a href="https://urs.groupoid.space">Urs</a></li>
+          <li><a href="https://github.com/groupoid/henk">Henk</a> — Pure Type System for Erlang</li>
+          <li><a href="https://github.com/groupoid/anders">Anders</a> sources</li>
+          <li><a href="https://github.com/groupoid/CCHM">Cubical Base Library</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h3>Affiliations</h3>
+      <div>
+        <ul>
+          <li>SYNRC — Technical Director (2005—2025)</li>
+          <li>Longchen Nyingthig Ukraine — Director (2011—2025)</li>
+          <li>Groupoid Infinity Institute — Senior Researcher (2017)</li>
+          <li>Axiosis Publishing — Editor-in-Chief (2022—2025)</li>
+          <li>PrivatBank — Architect (2015-2016)</li>
+          <li>INFOTECH — Lead Engineer (2019—2023)</li>
+          <li>eHealth Ukraine — Head of System Analysis (2024—2025)</li>
+        </ul>
+      </div>
+    </section>
+  </article>
+
+  <article>
+    <section>
+      <h3>People</h3>
+      <div>
+        <ul>
+          <li><b><a href="https://github.com/5HT">5HT</a></b> — Maxim Sokhatsky (BDFL)</li>
+          <li><b><a href="https://github.com/doxtop">doxtop</a></b> — Andrii Zadorozhnii</li>
+          <li><b><a href="https://github.com/vsov">vsov</a></b> — Viktor Sovietov</li>
+          <li><b><a href="https://github.com/wizzard0">wizzard0</a></b> — Oleksandr Nikitin</li>
+          <li><b><a href="https://github.com/sokal32">sokal32</a></b> — Vitaly Shutko</li>
+          <li><b><a href="https://github.com/cystbear">cystbear</a></b> — Oleg Zinchenko</li>
+          <li><b><a href="https://github.com/bushyn">bushyn</a></b> — Arseniy Bushyn</li>
+          <li><b><a href="https://github.com/cryoflamer">cryoflamer</a></b> — Yuri Maslovsky</li>
+          <li><b><a href="https://github.com/qomputer">qomputer</a></b> — Igor Kharin</li>
+          <li><b><a href="https://github.com/pal-alex">pal-alex</a></b> — Oleksandr Palchikovsky</li>
+          <li><b><a href="https://github.com/221V">221V</a></b> — Taras Torous</li>
+          <li><b><a href="https://github.com/umka1332">umka1332</a></b> — Oleksandr Naumov</li>
+          <li><b><a href="https://github.com/SunRiseGG">SunRiseGG</a></b> — Ivan Kulyk</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <br/>
+      <a style="margin-left:35px; display:inline-block;" href="https://github.com/synrc">
+        <img style="width:150px;" src="https://n2o.dev/img/github.svg"/>
+      </a>
+    </section>
+  </article>
+</aside>
+
+<main>
+<article>
+  <section>
+    <h3>AUTHORSHIP</h3>
+    <p>
+      All components of the Synrc Operating System (OS.1), the N2O family,
+      the ERP.1 product line and the supporting high-assurance libraries
+      are authored and owned by Maxim Sokhatsky (5HT). The architecture
+      follows the three-plane capability model documented in <code>os.txt</code>:
+      Security Admin BEAM, System Admin BEAM and Application BEAM(s).
+      Long-term cryptographic material never leaves the Security Plane;
+      the Control Plane is the sole capability broker; Application BEAMs
+      receive only short-lived credentials via SCM_RIGHTS after ABAC decisions.
+    </p>
+    <p>
+      The stack is built for regulated, sovereign and high-security environments.
+      It optimises for absolute isolation of secrets, formal auditability,
+      a minimal TCB and Erlang/OTP supervision semantics. Base OS layer is
+      Alpine/Chimera compatible (musl + BSD userland). C99 components are
+      integrated as NIFs. Runtime unit is an Erlang BEAM (VM, OCI or pod).
+    </p>
+  </section>
+  <section>
+    <h3>INTERN</h3>
+    <p>
+      Foundational entry point. Public HTML/ROFF manuals, TeX/PDF books and
+      release notes covering N2O, BPE, KVS, MAD and the basic ERP modules.
+      Completely free. Supports the last four major OTP releases (25–28)
+      on Windows, Linux and macOS. Published on Hex.pm.
+    </p>
+  </section>
+  <section>
+    <h3>SPORT</h3>
+    <p>
+      Intermediate tier for skilled teams. Extended books (Volume 2 &amp; 3)
+      covering advanced implementation patterns, system design, integration
+      techniques and production usage of the full stack. Bridges theory and
+      practice for scalable, high-performance applications.
+    </p>
+  </section>
+  <section>
+    <h3>PRO</h3>
+    <p>
+      Highest professional tier. Formal specifications, production manuals
+      and certified documentation for BPE, KVS, ERP and the complete
+      enterprise stack. Intended for organisations that require industrial
+      strength, formal correctness, maximum performance, security compliance
+      and official certification (banking, government, telecommunications).
+    </p>
+  </section>
+  <section>
+    <h3>NIST SP 800-53</h3>
+    <p>
+      The OS.1 three-plane taxonomy fully attests approximately 85 of the
+      examined base controls and partially attests another 20 (process-
+      dependent). Strongest families: AC, IA, SC, CM, AU, SI, SR.
+      Physical/environmental and some contingency/acquisition controls
+      remain the responsibility of the operator.
+    </p>
+  </section>
+</article>
+</main>
 <aside>
     <article>
         <section>
@@ -612,6 +990,10 @@
         </figure>
     </section>
 </main>
-<footer>Namdak Tönpa <span class="heart">&nbsp;❤&nbsp;</span> 1980—2026</footer>
+
+<footer>
+  5HT &copy; 2009—2026 Cryptographic Telesystems, LLC · All repositories owned by the author
+</footer>
+<script>function drop(){document.getElementById("dropdown").classList.toggle("show");}</script>
 </body>
 </html>
